@@ -2,26 +2,31 @@
 FullDiskAlert
 =============
 
+A simple script to check if you hard disk is full.
 
-
-Installation
+To configure
 ============
+Do your changes in the config.yaml::
 
-Lists look like this:
+    path: / # Path to monitored partition
+    threshold: 80 # Value of alarm, if disk space is over the value, then sends alarm
+    receivers: # YAML array with receivers
+        - fake@fakemail.fake
+        - one_more@mail.com
+    email:
+        from: From fake # Mail from
+        subject: Full disk alert!! # Mail subject
+    host: # Mail server data (preconfigured to use Gmail)
+        host : smtp.gmail.com
+        password : fakepass
+        user : fake@fakemail.fake
+        port : 587
 
-* First
+To use
+======
+The best choice to use this is creating a cron::
 
-* Second. Can be multiple lines
-  but must be indented properly.
+    crontab -e
+    */30 * * * * /path/to/check_disk_usage.py
 
-About
------
-
-Numbered lists look like you'd expect:
-
-1. hi there
-
-2. must be going
-
-Urls are http://like.this and links can be
-written `like this <http://www.example.com/foo/bar>`_.
+This cron executes this every 30 minutes
