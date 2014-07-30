@@ -29,4 +29,4 @@ The best choice to use this is creating a cron::
     crontab -e
     */30 * * * * /path/to/check_disk_usage.py
 
-This cron executes this every 30 minutes
+This cron executes the script every 30 minutes
