@@ -1,0 +1,12 @@
+path: /
+threshold: 80
+receivers:
+    - fake@fakemail.fake
+email:
+    from: From fake
+    subject: Full disk alert!!
+host:
+    host : smtp.gmail.com
+    password : fakepass
+    user : fake@fakemail.fake
+    port : 587
