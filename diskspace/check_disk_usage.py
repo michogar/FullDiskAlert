@@ -16,6 +16,8 @@ Avail: 22.77GB
 The idea would be to put this in a Cron Job and have it email you when
 the free disk space is lower than "n" percent.
 
+http://blog.projectfondue.com/archives/2010/01/21/getting-an-early-warning-of-low-disk-space
+
 """
 
 import sys

@@ -7,6 +7,8 @@ Simple class for working out the free disk space on a system
 by Stuart Colville http://muffinresearch.co.uk
 License: http://www.opensource.org/licenses/mit-license.php
 
+http://blog.projectfondue.com/archives/2010/01/21/getting-an-early-warning-of-low-disk-space
+
 """
 
 import os

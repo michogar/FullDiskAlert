@@ -6,9 +6,9 @@ version = '0.1'
 
 setup(name='FullDiskAlert',
       version=version,
-      author="Micho García",
+      author="Micho Garcia",
       author_email="micho.garcia@geomati.co",
-      license="GPLv3",
+      license="LICENSE.txt",
       description="Sends mail when disk is above threshold",
       packages=find_packages(),
       install_requires=[
