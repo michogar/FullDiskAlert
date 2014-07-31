@@ -4,3 +4,6 @@
 #Distribution
 FullDiskAlert.egg-info/*
 dist/*
+
+#Python
+diskspace/*.pyc
