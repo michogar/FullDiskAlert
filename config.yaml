@@ -1,5 +1,5 @@
 path: /
-threshold: 10
+threshold: 80
 receivers:
     - fake@fakemail.fake
 email:

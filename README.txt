@@ -2,14 +2,14 @@
 FullDiskAlert
 =============
 
-A simple script to check if you hard disk is full.
+A simple script to check if you hard disk is full. It sends a mail when the used space of your hard disk is over the limit
 
 To configure
 ============
 Do your changes in the config.yaml::
 
     path: / # Path to monitored partition
-    threshold: 80 # Value of alarm, if disk space is over the value, then sends alarm
+    threshold: 80 # Value of alarm, if used disk space is over the value, then sends alarm
     receivers: # YAML array with receivers
         - fake@fakemail.fake
         - one_more@mail.com
