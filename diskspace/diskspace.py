@@ -29,10 +29,22 @@ class DiskSpace():
         else:
             return True
 
+    def used_over_limit(self, limit):
+        """Bool returns true if used space is over the limit %"""
+        if float(self.percent_used()) > float(limit):
+            return True
+        else:
+            return False
+
     def percent_free(self):
         """Gets the amount of space left as a percentage"""
         return (math.ceil(float(100) / float(self.bytes_capacity())
                                                 * self.bytes_free()))
+
+    def percent_used(self):
+        """Gets the amount of space left as a percentage"""
+        return (math.ceil(float(100) / float(self.bytes_capacity())
+                                                * self.bytes_used()))
 
     def bytes_capacity(self):
         """Returns the total capacity in bytes"""

@@ -33,10 +33,10 @@ def main():
 
     percent_limit = config.threshold
 
-    if not ds.has_free_space(percent_limit):
+    if ds.used_over_limit(percent_limit):
     
-        message = "Running low on disk space. %s%% remaining "\
-           "(Warning Threshold: %s%%)" % (ds.percent_free(), percent_limit) + "\n"
+        message = "Your hard disk is getting full. You are using %s%% of the available space."\
+           "(Warning Threshold: %s%%)" % (ds.percent_used(), percent_limit) + "\n"
         message += "Total: %s" % ds.humanize_bytes(ds.bytes_capacity(), 1000) + "\n"
         message += "Used:  %s" % ds.humanize_bytes(ds.bytes_used(), 1000) + "\n"
         message += "Avail: %s" % ds.humanize_bytes(ds.bytes_free(), 1000)
